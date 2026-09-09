@@ -1,0 +1,5 @@
+state/*
+!state/calendario.json
+__pycache__/
+*.pyc
+.env

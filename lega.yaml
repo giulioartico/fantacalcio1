@@ -1,0 +1,35 @@
+# Impostazioni della tua lega. Modifica solo questo file se cambiano le regole.
+
+nome_lega: "La mia lega"
+modalita: classic          # classic | mantra  (mantra è supportato in versione semplificata)
+
+# Moduli ammessi, nel formato Difensori-Centrocampisti-Attaccanti (il portiere è implicito)
+moduli:
+  - "3-4-3"
+  - "3-5-2"
+  - "4-3-3"
+  - "4-4-2"
+  - "4-5-1"
+  - "5-3-2"
+  - "5-4-1"
+
+# Modificatore di difesa (bonus in base alla media voto di portiere + 3 migliori difensori).
+# Si applica solo se schieri almeno 4 difensori.
+modificatore_difesa: true
+
+# Quanti giocatori mettere in panchina nella mail (in ordine di ingresso consigliato)
+panchina_max: 8
+
+pesi:
+  # Voto stimato assegnato a un giocatore che NON parte titolare.
+  # Serve a penalizzare le scommesse: più è basso, più l'agente evita i giocatori a rischio.
+  valore_senza_voto: 5.4
+
+  # Sotto questa probabilità di titolarità il giocatore viene proposto solo in panchina.
+  soglia_titolarita_minima: 35
+
+  # Quanto pesa il modificatore difesa nella scelta del modulo (1.0 = peso pieno)
+  peso_modificatore: 1.0
+
+# Chi deve ricevere la mail (può anche essere impostato con la variabile MAIL_TO)
+destinatario: "tua-mail@example.com"

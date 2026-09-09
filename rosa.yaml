@@ -1,0 +1,80 @@
+# La tua rosa. Ruolo: P (portiere), D (difensore), C (centrocampista), A (attaccante).
+# "squadra" serve all'agente per capire chi gioca contro chi.
+# Questo è un esempio: sostituiscilo con i tuoi giocatori.
+
+giocatori:
+  - nome: "Di Gregorio"
+    squadra: "Juventus"
+    ruolo: P
+  - nome: "Falcone"
+    squadra: "Lecce"
+    ruolo: P
+
+  - nome: "Bastoni"
+    squadra: "Inter"
+    ruolo: D
+  - nome: "Dodo"
+    squadra: "Fiorentina"
+    ruolo: D
+  - nome: "Cambiaso"
+    squadra: "Juventus"
+    ruolo: D
+  - nome: "Bijol"
+    squadra: "Udinese"
+    ruolo: D
+  - nome: "Gatti"
+    squadra: "Juventus"
+    ruolo: D
+  - nome: "Zappa"
+    squadra: "Cagliari"
+    ruolo: D
+  - nome: "Kempf"
+    squadra: "Como"
+    ruolo: D
+  - nome: "Pezzella"
+    squadra: "Empoli"
+    ruolo: D
+
+  - nome: "Pulisic"
+    squadra: "Milan"
+    ruolo: C
+  - nome: "Barella"
+    squadra: "Inter"
+    ruolo: C
+  - nome: "Zaccagni"
+    squadra: "Lazio"
+    ruolo: C
+  - nome: "Ferguson"
+    squadra: "Bologna"
+    ruolo: C
+  - nome: "Frattesi"
+    squadra: "Inter"
+    ruolo: C
+  - nome: "Bonaventura"
+    squadra: "Fiorentina"
+    ruolo: C
+  - nome: "Fazzini"
+    squadra: "Empoli"
+    ruolo: C
+  - nome: "Kvaratskhelia"
+    squadra: "Napoli"
+    ruolo: C
+
+  - nome: "Lautaro Martinez"
+    squadra: "Inter"
+    ruolo: A
+  - nome: "Retegui"
+    squadra: "Atalanta"
+    ruolo: A
+  - nome: "Thuram"
+    squadra: "Inter"
+    ruolo: A
+  - nome: "Castellanos"
+    squadra: "Lazio"
+    ruolo: A
+  - nome: "Colombo"
+    squadra: "Empoli"
+    ruolo: A
+  - nome: "Pinamonti"
+    squadra: "Genoa"
+    ruolo: A
