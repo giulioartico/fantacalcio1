@@ -9,6 +9,7 @@ Anthropic resta disponibile ma è a pagamento.
 import json
 import os
 import re
+import time
 
 import requests
 
@@ -76,12 +77,32 @@ def estrai_json(testo: str):
     return json.loads(testo[inizio : fine + 1])
 
 
+# Errori temporanei del server: vale la pena riprovare invece di arrendersi subito.
+CODICI_TEMPORANEI = {429, 500, 502, 503, 504}
+
+
+def _con_ritentativi(url, headers, json, tentativi=3):
+    ultimo = None
+    for i in range(tentativi):
+        r = requests.post(url, headers=headers, json=json, timeout=TIMEOUT)
+        if r.status_code < 400 or r.status_code not in CODICI_TEMPORANEI:
+            return r
+        ultimo = r
+        attesa = 5 * (i + 1)
+        print(
+            f"  Il server ha risposto {r.status_code} (errore temporaneo), "
+            f"riprovo fra {attesa}s ({i + 1}/{tentativi})..."
+        )
+        time.sleep(attesa)
+    return ultimo
+
+
 def chiedi(prompt: str, max_token: int = 8000):
     """Manda il prompt al fornitore configurato e restituisce il JSON già parsato."""
     p = _profilo()
 
     if p["nome"] == "anthropic":
-        r = requests.post(
+        r = _con_ritentativi(
             p["url"],
             headers={
                 "x-api-key": p["api_key"],
@@ -93,7 +114,6 @@ def chiedi(prompt: str, max_token: int = 8000):
                 "max_tokens": max_token,
                 "messages": [{"role": "user", "content": prompt}],
             },
-            timeout=TIMEOUT,
         )
         if r.status_code >= 400:
             raise RuntimeError(f"Errore {p['nome']} {r.status_code}: {r.text[:400]}")
@@ -101,7 +121,7 @@ def chiedi(prompt: str, max_token: int = 8000):
         testo = "\n".join(b.get("text", "") for b in blocchi if b.get("type") == "text")
         return estrai_json(testo)
 
-    r = requests.post(
+    r = _con_ritentativi(
         p["url"],
         headers={
             "Authorization": f"Bearer {p['api_key']}",
@@ -113,7 +133,6 @@ def chiedi(prompt: str, max_token: int = 8000):
             "temperature": 0.2,
             "messages": [{"role": "user", "content": prompt}],
         },
-        timeout=TIMEOUT,
     )
     if r.status_code >= 400:
         aiuto = ""
