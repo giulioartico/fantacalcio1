@@ -1,80 +1,79 @@
-# La tua rosa. Ruolo: P (portiere), D (difensore), C (centrocampista), A (attaccante).
-# "squadra" serve all'agente per capire chi gioca contro chi.
-# Questo è un esempio: sostituiscilo con i tuoi giocatori.
-
 giocatori:
-  - nome: "Di Gregorio"
-    squadra: "Juventus"
-    ruolo: P
-  - nome: "Falcone"
-    squadra: "Lecce"
-    ruolo: P
-
-  - nome: "Bastoni"
-    squadra: "Inter"
-    ruolo: D
-  - nome: "Dodo"
+  - nome: "De Gea"
     squadra: "Fiorentina"
-    ruolo: D
-  - nome: "Cambiaso"
-    squadra: "Juventus"
-    ruolo: D
-  - nome: "Bijol"
+    ruolo: P
+  - nome: "Mandas"
+    squadra: "Lazio"
+    ruolo: P
+  - nome: "Okoye"
     squadra: "Udinese"
+    ruolo: P
+
+  - nome: "Dimarco"
+    squadra: "Inter"
     ruolo: D
-  - nome: "Gatti"
+  - nome: "Kalulu"
     squadra: "Juventus"
     ruolo: D
-  - nome: "Zappa"
-    squadra: "Cagliari"
+  - nome: "Spence"
+    squadra: "Inter"
     ruolo: D
-  - nome: "Kempf"
-    squadra: "Como"
+  - nome: "Spinazzola"
+    squadra: "Napoli"
     ruolo: D
-  - nome: "Pezzella"
-    squadra: "Empoli"
+  - nome: "Akanji"
+    squadra: "Inter"
+    ruolo: D
+  - nome: "Scalvini"
+    squadra: "Atalanta"
+    ruolo: D
+  - nome: "Stones"
+    squadra: "Inter"
+    ruolo: D
+  - nome: "Miranda J."
+    squadra: "Bologna"
     ruolo: D
 
-  - nome: "Pulisic"
-    squadra: "Milan"
+  - nome: "McTominay"
+    squadra: "Napoli"
     ruolo: C
-  - nome: "Barella"
-    squadra: "Inter"
+  - nome: "Orsolini"
+    squadra: "Bologna"
     ruolo: C
-  - nome: "Zaccagni"
+  - nome: "Fabbian"
+    squadra: "Parma"
+    ruolo: C
+  - nome: "Cancellieri"
     squadra: "Lazio"
     ruolo: C
   - nome: "Ferguson"
     squadra: "Bologna"
     ruolo: C
-  - nome: "Frattesi"
-    squadra: "Inter"
+  - nome: "Thuram K."
+    squadra: "Juventus"
     ruolo: C
-  - nome: "Bonaventura"
-    squadra: "Fiorentina"
+  - nome: "Perez K."
+    squadra: "Venezia"
     ruolo: C
-  - nome: "Fazzini"
-    squadra: "Empoli"
-    ruolo: C
-  - nome: "Kvaratskhelia"
+  - nome: "Zambo Anguissa"
     squadra: "Napoli"
     ruolo: C
 
-  - nome: "Lautaro Martinez"
-    squadra: "Inter"
+  - nome: "Kean"
+    squadra: "Como"
     ruolo: A
-  - nome: "Retegui"
+  - nome: "Geubbels"
+    squadra: "Lecce"
+    ruolo: A
+  - nome: "Krstovic"
     squadra: "Atalanta"
     ruolo: A
-  - nome: "Thuram"
-    squadra: "Inter"
+  - nome: "Woltemade"
+    squadra: "Juventus"
     ruolo: A
-  - nome: "Castellanos"
-    squadra: "Lazio"
+  - nome: "Adams A."
+    squadra: "Venezia"
     ruolo: A
-  - nome: "Colombo"
-    squadra: "Empoli"
-    ruolo: A
-  - nome: "Pinamonti"
-    squadra: "Genoa"
+  - nome: "Touré E."
+    squadra: "Parma"
     ruolo: A
