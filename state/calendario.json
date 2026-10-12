@@ -1,14 +1,14 @@
 {
-  "aggiornato": "2026-10-11T19:49:16.181050+00:00",
+  "aggiornato": "2026-10-12T22:40:38.697446+00:00",
   "giornate": [
     {
-      "giornata": 6,
+      "giornata": 7,
       "partite": [
         {
-          "giornata": 6,
-          "casa": "Atalanta",
-          "trasferta": "Venezia",
-          "inizio": "2026-10-12T16:30:00+00:00"
+          "giornata": 7,
+          "casa": "Frosinone",
+          "trasferta": "Sassuolo",
+          "inizio": "2026-10-16T18:45:00+00:00"
         }
       ]
     }
